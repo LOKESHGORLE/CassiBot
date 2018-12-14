@@ -15,9 +15,10 @@ namespace UserPropertiesWindowAuth
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            string WantedUser="started getting users";
+           
             try
             {
+                string WantedUser = "started getting users";
                 //userathtml.Text = Context.User.Identity;
                 #region
                 string UserNAmes = "";
@@ -47,14 +48,14 @@ namespace UserPropertiesWindowAuth
                 IPrincipal p = Thread.CurrentPrincipal;
                 IIdentity i = Thread.CurrentPrincipal.Identity;
                 
-                WantedUser += "UNbyGetCurrUser : " + WindowsIdentity.GetCurrent().Name + "<br/>UNbyUser : " + WindowsIdentity.GetCurrent().User;
+               // WantedUser += "UNbyGetCurrUser : " + WindowsIdentity.GetCurrent().Name + "<br/>UNbyUser : " + WindowsIdentity.GetCurrent().User;
 
-                WantedUser += "<br/>UserByUserIdentity : " + User.Identity.Name + "";
-                WantedUser += "<br/>HttpContext.Current.User : " + HttpContext.Current.User;
+               // WantedUser += "<br/>UserByUserIdentity : " + User.Identity.Name + "";
+               // WantedUser += "<br/>HttpContext.Current.User : " + HttpContext.Current.User;
                 WindowsIdentity user;
                 user = HttpContext.Current.Request.LogonUserIdentity;
-                WantedUser += "<br/> HttpContext.Current.Request.LogonUserIdentity : " + user;
-                WantedUser += "<br/>" + "Thread.CurrentPrincipal.Identity Identity Name: " + i.Name + " <br/>Thread.CurrentPrincipal.Identity.Name :  " + p.Identity.Name;
+               // WantedUser += "<br/> HttpContext.Current.Request.LogonUserIdentity : " + user;
+               // WantedUser += "<br/>" + "Thread.CurrentPrincipal.Identity Identity Name: " + i.Name + " <br/>Thread.CurrentPrincipal.Identity.Name :  " + p.Identity.Name;
                 UNAMe.Text = WantedUser;
             }
             catch (Exception ex)
