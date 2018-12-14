@@ -15,7 +15,7 @@ namespace UserPropertiesWindowAuth
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            string WantedUser="";
+            string WantedUser="started getting users";
             try
             {
                 //userathtml.Text = Context.User.Identity;
