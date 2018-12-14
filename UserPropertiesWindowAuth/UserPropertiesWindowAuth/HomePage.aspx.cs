@@ -52,8 +52,8 @@ namespace UserPropertiesWindowAuth
 
                // WantedUser += "<br/>UserByUserIdentity : " + User.Identity.Name + "";
                // WantedUser += "<br/>HttpContext.Current.User : " + HttpContext.Current.User;
-                WindowsIdentity user;
-                user = HttpContext.Current.Request.LogonUserIdentity;
+              //  WindowsIdentity user;
+                //user = HttpContext.Current.Request.LogonUserIdentity;
                // WantedUser += "<br/> HttpContext.Current.Request.LogonUserIdentity : " + user;
                // WantedUser += "<br/>" + "Thread.CurrentPrincipal.Identity Identity Name: " + i.Name + " <br/>Thread.CurrentPrincipal.Identity.Name :  " + p.Identity.Name;
                 UNAMe.Text = WantedUser;
