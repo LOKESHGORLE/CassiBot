@@ -9,7 +9,7 @@
 <body>
     <form id="form1" runat="server">
         <div>
-            
+           <%-- <asp:LoginName ID="LoginName1" FormatString="Welcome {0}!" runat="server" />--%>
              <%-- <asp:Label ID="userathtml" runat="server" Text=" <% Context.Profile.UserName %>"></asp:Label><br/>--%>
 
                             
