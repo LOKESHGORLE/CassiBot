@@ -20,29 +20,29 @@ namespace UserPropertiesWindowAuth
             {
                 //userathtml.Text = Context.User.Identity;
                 #region
-                //string UserNAmes = "";
-                
-                //using (var context = new PrincipalContext(ContextType.Domain, "acuvate.com"))
-                //{
-                //    using (var searcher = new PrincipalSearcher(new UserPrincipal(context)))
-                //    {
-                //        int cnt = 1;
-                //        foreach (var result in searcher.FindAll())
-                //        {
-                //            DirectoryEntry de = result.GetUnderlyingObject() as DirectoryEntry;
-                //            WantedUser += (string)de.Properties["givenName"].Value + "/";
-                //            //Console.WriteLine("First Name: " + de.Properties["givenName"].Value);
-                //            //Console.WriteLine("SAM account name   : " + de.Properties["samAccountName"].Value);
-                //            //Console.WriteLine("User principal name: " + de.Properties["userPrincipalName"].Value);
-                //            //Console.WriteLine();
-                //            //cnt++;
-                //        }
-                //        UNAMe.Text = UserNAmes;
-                //        Email.Text = "akjhlghasdgeagrhtrhtrhtrhtrgh";
-                //        // Console.WriteLine("Total users: " + cnt);
+                string UserNAmes = "";
 
-                //    }
-                //}
+                using (var context = new PrincipalContext(ContextType.Domain, "nmc-uk.net"))
+                {
+                    using (var searcher = new PrincipalSearcher(new UserPrincipal(context)))
+                    {
+                        int cnt = 1;
+                        foreach (var result in searcher.FindAll())
+                        {
+                            DirectoryEntry de = result.GetUnderlyingObject() as DirectoryEntry;
+                            WantedUser += (string)de.Properties["givenName"].Value + "/";
+                            //Console.WriteLine("First Name: " + de.Properties["givenName"].Value);
+                            //Console.WriteLine("SAM account name   : " + de.Properties["samAccountName"].Value);
+                            //Console.WriteLine("User principal name: " + de.Properties["userPrincipalName"].Value);
+                            //Console.WriteLine();
+                            //cnt++;
+                        }
+                        //UNAMe.Text = UserNAmes;
+                        Email.Text = "akjhlghasdgeagrhtrhtrhtrhtrgh";
+                        // Console.WriteLine("Total users: " + cnt);
+
+                    }
+                }
                 #endregion
                 IPrincipal p = Thread.CurrentPrincipal;
                 IIdentity i = Thread.CurrentPrincipal.Identity;
